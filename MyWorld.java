@@ -1,7 +1,11 @@
 import greenfoot.*;
  
 public class MyWorld extends World {
-    public MyWorld() {
+    Label scoreLabel;
+    int level = 1;
+    
+    public MyWorld() 
+    {
         super(600, 400, 1);
         
         // Create the elephant object 
@@ -25,12 +29,12 @@ public class MyWorld extends World {
     /** 
      * Create a new apple at a random location at the top of the screen 
      */
-    public void createFish()
+    public void createApple()
     {
         Apple apple = new Apple();
-        apple.setSpeed(level);
+        //apple.setSpeed(level);
         int x = Greenfoot.getRandomNumber(500);
-        int y = 0 ;
-        addObject(fish, x, y);
+        int y = 0;
+        addObject(apple, x, y);
     }
 }
