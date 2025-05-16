@@ -18,13 +18,5 @@ public class Apple extends Actor
         int x = getX();
         int y = getY() + 2;
         setLocation(x, y);
-        
-        // Remove fish and draw game over when fish gets to bottom
-        MyWorld world = (MyWorld) getWorld();
-        if(getY() <= world.getHeight())
-        {
-            world.gameOver();
-            world.removeObject(this);
-        }
     }
 }
